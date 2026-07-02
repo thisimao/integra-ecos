@@ -581,12 +581,7 @@ Obrigado por participar do
 Desafio ECOs.
 </p>
 
-${
-
-pontos >= 8 ?
-
-`
-
+${pontos >= 8 ? `
 <div class="certificado">
 
 🎓 CERTIFICADO ECOs
@@ -599,17 +594,9 @@ Você demonstrou conhecimento
 sobre descarte correto de resíduos.
 
 </div>
+` : ''}
 
-`
-
-:
-
-''
-
-}
-
-<button
-class="btn-reiniciar"
+<button class="btn-reiniciar"
 onclick="reiniciarJogo()">
 
 🔄 Jogar Novamente
@@ -617,5 +604,40 @@ onclick="reiniciarJogo()">
 </button>
 
 `;
+/* ==========================================
+   REINICIAR JOGO
+========================================== */
+
+function reiniciarJogo(){
+
+    indice = 0;
+    pontos = 0;
+    itemAtual = null;
+
+    feedback.innerHTML = "";
+    resultadoFinal.innerHTML = "";
+
+    dragItem.style.display = "flex";
+
+    const zonas =
+    document.querySelector(".dropzones");
+
+    if(zonas){
+
+        zonas.style.display = "grid";
+
+    }
+
+    document
+    .getElementById("gameProgressBar")
+    .style.width = "0%";
+
+    document
+    .getElementById("currentItem")
+    .innerText = "1";
+
+    carregarItem();
+
+}
 
 }
