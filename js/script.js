@@ -596,11 +596,8 @@ sobre descarte correto de resíduos.
 </div>
 ` : ''}
 
-<button class="btn-reiniciar"
-onclick="reiniciarJogo()">
-
+<button class="btn-reiniciar" onclick="window.location.reload()">
 🔄 Jogar Novamente
-
 </button>
 
 `;
