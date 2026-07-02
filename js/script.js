@@ -608,6 +608,14 @@ sobre descarte correto de resíduos.
 
 }
 
+<button
+class="btn-reiniciar"
+onclick="reiniciarJogo()">
+
+🔄 Jogar Novamente
+
+</button>
+
 `;
 
 }
