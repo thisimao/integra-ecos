@@ -640,30 +640,67 @@ margin:auto;
 
 }
 
-.integra-ecos{
 
+.integra-ecos{
     display:flex;
     justify-content:center;
-    align-items:center;
-    gap:18px;
+    align-items:flex-end;
+    gap:12px;
 
-    font-size:4.5rem;
-    font-weight:800;
+    font-size:5.8rem;
+    font-weight:900;
+    line-height:1;
 
-    color:#0b4f6c;
+    color:#fff;
 
-    margin-bottom:20px;
+    text-shadow:
+        0 4px 18px rgba(0,0,0,.45),
+        0 2px 8px rgba(0,0,0,.35);
 
+    margin-bottom:25px;
 }
 
 .logo-ecos{
-
-    height:95px;
+    height:210px;          /* aumente bastante */
     width:auto;
-
     display:block;
 
+    margin-bottom:-10px;   /* desce um pouco para alinhar com o texto */
+
+    filter:
+        brightness(1.45)
+        contrast(1.2)
+        saturate(1.35)
+        drop-shadow(0 5px 15px rgba(0,0,0,.45));
+
+
+
 }
+
+
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,.35) 0%,
+        rgba(255,255,255,.18) 35%,
+        rgba(0,0,0,.08) 70%,
+        rgba(0,0,0,.18) 100%
+    );
+
+    z-index: 0;
+}
+
+.hero-content{
+    max-width: 700px;
+    padding-left: 40px;
+
+}
+
+
 
 .game-container{
 max-width:900px;
@@ -958,19 +995,15 @@ margin-top:30px;
 
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
     .integra-ecos{
-
-        font-size:2.5rem;
-        gap:10px;
-
+        font-size:3.3rem;
+        gap:12px;
     }
 
     .logo-ecos{
-
-        height:60px;
-
+        height:70px;
     }
 
 }
